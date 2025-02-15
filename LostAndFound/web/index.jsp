@@ -1,17 +1,10 @@
-<%-- 
-    Document   : index
-    Created on : Feb 15, 2025, 1:16:10 PM
-    Author     : Vintage
---%>
-
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
-<!DOCTYPE html>
+<%@ page contentType="text/html;charset=UTF-8" %>
 <html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
-    </head>
-    <body>
-        <h1>Hello World!</h1>
-    </body>
+<head>
+    <title>Lost and Found System</title>
+</head>
+<body>
+    <h2>Welcome to the Lost and Found System</h2>
+    <a href="register.jsp">Sign Up</a> | <a href="login.jsp">Login</a>
+</body>
 </html>
