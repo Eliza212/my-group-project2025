@@ -1,1 +1,0 @@
-# my-group-project2025
