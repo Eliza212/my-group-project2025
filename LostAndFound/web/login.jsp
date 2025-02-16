@@ -5,8 +5,24 @@
     <script>
         function toggleLoginForm() {
             var userType = document.getElementById("loginType").value;
-            document.getElementById("studentLogin").style.display = userType === "Student" ? "block" : "none";
-            document.getElementById("securityLogin").style.display = userType === "Security Officer" ? "block" : "none";
+            var studentLogin = document.getElementById("studentLogin");
+            var securityLogin = document.getElementById("securityLogin");
+            var regNumber = document.getElementsByName("regNumber")[0];
+            var staffNumber = document.getElementsByName("staffNumber")[0];
+
+            if (userType === "Student") {
+                studentLogin.style.display = "block";
+                securityLogin.style.display = "none";
+                regNumber.required = true;
+                staffNumber.required = false;
+                staffNumber.value = ""; // Clear hidden field value
+            } else {
+                studentLogin.style.display = "none";
+                securityLogin.style.display = "block";
+                regNumber.required = false;
+                staffNumber.required = true;
+                regNumber.value = ""; // Clear hidden field value
+            }
         }
     </script>
 </head>
@@ -20,14 +36,17 @@
         </select>
 
         <div id="studentLogin">
-            <label>Registration Number:</label> <input type="text" name="regNumber" required><br>
+            <label>Registration Number:</label> 
+            <input type="text" name="regNumber"><br>
         </div>
 
         <div id="securityLogin" style="display:none;">
-            <label>Staff Number:</label> <input type="text" name="staffNumber" required><br>
+            <label>Staff Number:</label> 
+            <input type="text" name="staffNumber"><br>
         </div>
 
-        <label>Password:</label> <input type="password" name="password" required><br>
+        <label>Password:</label> 
+        <input type="password" name="password" required><br>
 
         <input type="submit" value="Login">
     </form>

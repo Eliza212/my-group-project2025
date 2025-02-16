@@ -5,9 +5,25 @@
     <script>
         function toggleForm() {
             var userType = document.getElementById("userType").value;
-            document.getElementById("studentFields").style.display = userType === "Student" ? "block" : "none";
-            document.getElementById("securityFields").style.display = userType === "Security Officer" ? "block" : "none";
+            var studentFields = document.getElementById("studentFields");
+            var securityFields = document.getElementById("securityFields");
+
+            if (userType === "Student") {
+                studentFields.style.display = "block";
+                securityFields.style.display = "none";
+
+                document.querySelectorAll("#studentFields input").forEach(input => input.removeAttribute("disabled"));
+                document.querySelectorAll("#securityFields input").forEach(input => input.setAttribute("disabled", "true"));
+            } else {
+                studentFields.style.display = "none";
+                securityFields.style.display = "block";
+
+                document.querySelectorAll("#securityFields input").forEach(input => input.removeAttribute("disabled"));
+                document.querySelectorAll("#studentFields input").forEach(input => input.setAttribute("disabled", "true"));
+            }
         }
+
+        window.onload = toggleForm;
     </script>
 </head>
 <body>
@@ -20,12 +36,12 @@
         </select>
         
         <div id="studentFields">
-            <label>Name:</label> <input type="text" name="name" required><br>
+            <label>Name:</label> <input type="text" name="studentName" required><br>
             <label>Registration Number:</label> <input type="text" name="regNumber" required><br>
         </div>
         
         <div id="securityFields" style="display:none;">
-            <label>Name:</label> <input type="text" name="name" required><br>
+            <label>Name:</label> <input type="text" name="securityName" required><br>
             <label>Staff Number:</label> <input type="text" name="staffNumber" required><br>
         </div>
         
