@@ -21,8 +21,9 @@ Security Department;  the security officers has the privilleges to:</p>
 
 <h5>Collaborators</h5>
 <ul>
-  <li><a href="https://github.com/Eliza212/">Eliza212</a></li>
-  <li><a href="https://github.com/JesseAger">JesseAger</a></li>
+  <li><a href="https://github.com/Eliza212/">Liz</a></li>
+  <li> <a href="https://github.com/tinah-67">Tina</a></li>
+  <li><a href="https://github.com/JesseAger">Ager</a></li>
 </ul>
 
 
