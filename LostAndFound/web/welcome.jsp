@@ -5,5 +5,7 @@
 </head>
 <body>
     <h2>Welcome!</h2>
+    <jsp:include page="footer.jsp" />
+
 </body>
 </html>

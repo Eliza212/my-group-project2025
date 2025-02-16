@@ -17,5 +17,7 @@
 
         <input type="submit" value="Reset Password">
     </form>
+    <jsp:include page="footer.jsp" />
+
 </body>
 </html>

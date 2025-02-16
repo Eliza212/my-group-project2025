@@ -51,5 +51,7 @@
         <input type="submit" value="Login">
     </form>
        <p><a href="reset-password.jsp">Forgot Password?</a></p>
+       <jsp:include page="footer.jsp" />
+
 </body>
 </html>
